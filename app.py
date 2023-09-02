@@ -79,19 +79,6 @@ def db_seed():
 # Routes                                        #
 #################################################
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-
-@app.route('/api/add/<int:a>/<int:b>')
-def add(a: int, b: int):
-    response = {
-        'sum': a+b,
-        'product': a*b
-    }
-    return jsonify(response)
-
 
 @app.route('/planets', methods=['GET'])
 def planets():
