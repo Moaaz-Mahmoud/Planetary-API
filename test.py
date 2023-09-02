@@ -12,6 +12,7 @@ class TestAPI(unittest.TestCase):
         self.client = app.test_client()
         db.create_all()
 
+    @unittest.skip("This test drops the database. It is to be run once in the beginning.")
     def tearDown(self):
         db.session.remove()
         db.drop_all()
